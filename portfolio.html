@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Chien Vu - Domino Media</title>    
+    <style>  
+ * {
+  margin: 0;
+  padding: 0;
+} 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+  
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 20%;
+}
+.fa:hover {
+    color: green;
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-flickr {
+  background: #f40083;
+  color: white;
+}
+body {
+    text-align:center;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+    font-size:2em;
+    justify-content: center;
+}
+nav{
+    background-color: rgba(23, 55, 67, 0.8);
+    box-shadow: 0 2px 0 rgba(250, 248, 248, 0.4);
+    width: 100%;
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+    justify-content:flex-end;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 10;
+}
+a[href^="#"]{
+       color:white;
+       padding-right: 40px;
+       font-size: 1.2em;
+       text-decoration: none;
+   }
+
+#welcome-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    background-image: url(https://live.staticflickr.com/65535/50190568001_8f03cebd43_k.jpg);
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    font-size: 1.2em;
+    
+}
+
+#welcome-section h1 {
+    font-family: 'Allerta Stencil';
+    font-size: 3em;
+    color: white;
+    text-shadow: black;
+
+}
+#flexbox{
+    display:flex;
+    flex-wrap:wrap;
+    padding: 30px;
+}
+#chienvu{
+    max-width: 60%;
+    height: auto;
+   margin: auto;
+}
+#chienphoto{
+    max-width: 60%;
+    height: auto;
+    margin: auto;
+}
+@media (max-width:600px){
+    #chienphoto{
+        display:none; }
+    }
+}
+#service{
+    max-width: 80%;
+    height:auto;
+    text-align: center;
+    font-size: 1.2em;
+    margin-left:50px;
+}
+#service h1 {
+    display: inline-block;
+    text-align:center;
+    width: 100%;
+    padding-left: 30px;
+}
+.gallery {
+  border: 1px solid #ccc;
+  float: left;
+  width: 420px;
+  height: 320px;
+  margin-left: 12%;
+  margin-top: 30px;
+  text-align: center;
+  line-height: 15px;
+}
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+#portfolio {
+    text-align:center;
+    margin: auto;
+    width: 90%;
+
+}
+#portfolio h1 {
+    display: inline-block;
+    width: 100%;
+    padding: 30px;
+}
+
+iframe{
+    border-width: 2px;
+    border-color:gray
+    padding: 20px;
+}
+#contact{
+    width: 90%;
+    height:500px;
+    text-align: center;
+    font-size: 1.2em;
+    margin: auto;
+
+}
+button {
+  border: none;
+  color: white;
+  background-color: #3B5998;
+  font-size: 1.1em;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 30px;
+  cursor: pointer;
+
+}
+    </style>
+
+
+
+</head>
+<body>
+    <nav>
+    <a href="#chienvu">About</a>
+    <a href="#porfolio">Work</a>
+    <a href="#contact">Contact</a>
+    </nav>
+    <main>
+    <section id="welcome-section">
+            <h1>Chien Vu <br> Domino Media</h1>
+        </section>
+    <section id="flexbox">
+        <img id="chienphoto" src="https://live.staticflickr.com/65535/50192773838_9cc84595e8_b.jpg" alt="Chien VU" width="400px" height="400px" >
+        <div id="chienvu"><h1>Hi, I am Chien Vu <br>The Founder of Domino Media</h1>
+             <p><i>I have been a photography/video producer for more than 10 years. Understanding the important of social media branding and online marketing, our company provides many sevices to our clients. Our mission is giving your story a unique perspective and meaning.</i></p></div>     
+        </section>
+        
+    <section id="service"><h1>Our Services</h1><br>
+        <div class="gallery">
+              <a target="_blank" href="">
+                <img src="https://live.staticflickr.com/65535/50190699162_510ae4a46a_m.jpg" alt="Wedding Package" width="420" height="270">
+              </a>
+              <div class="desc">Wedding Package</div>
+        </div>
+        <div class="gallery">
+                <a target="_blank" href="">
+                  <img src="https://live.staticflickr.com/65535/50190721902_90b293686c_m.jpg" alt="Music Video" width="420" height="270">
+                </a>
+                <div class="desc">Music Video</div>
+        </div>            
+        <div class="gallery">
+              <a target="_blank" href="">
+                <img src="https://live.staticflickr.com/65535/50190716457_4e643e332e_m.jpg" alt="Commercial Package" width="420" height="270">
+              </a>
+              <div class="desc">Commercial Package</div>
+        </div>            
+        <div class="gallery">
+              <a target="_blank" href="">
+                <img src="https://live.staticflickr.com/65535/50189945653_20ffa4c739_m.jpg" alt="Personal Branding Package" width="420" height="270">
+                </a>
+              <div class="desc">Personal Branding</div>
+        </div>
+    </section>
+            
+   <div id= "portfolio"><h1>Portforlio</h1><br>
+                <iframe width="45%"  src="https://www.youtube.com/embed/ofSkzeOz0B0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="45%"  src="https://www.youtube.com/embed/r1q5gPW6jQ0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="45%"  src="https://www.youtube.com/embed/WhDlzhoYJpA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="45%"  src="https://www.youtube.com/embed/yeARQWKojSU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br><a href="https://codepen.io/hezzipham" target="blank"><button type="button" >SHOW ALL</button></a>
+    </div>
+    <h1>Please contact me<br>
+        Hotline: 0978402506</h1>
+    <section id="contact">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.402799736571!2d105.80948754993567!3d21.01656308593625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab63fc205647%3A0xd5f0dbce1a94d1c7!2zMTIgTmfDtSAzNiBIb8OgbmcgTmfhu41jIFBow6FjaCwgTMOhbmcgSOG6oSwgxJDhu5FuZyDEkGEsIEjDoCBO4buZaSwgVmlldG5hbQ!5e0!3m2!1sen!2sus!4v1596600624916!5m2!1sen!2sus" width="90%" height="60%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div id="social media"> <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-flickr"></a>
+
+    </section>
+    </main>
+
+
+
+</body>
+<footer>
+</footer>
+</html>
