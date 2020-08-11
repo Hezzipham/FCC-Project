@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <title>Survey Form
+        </title>
+         <style>
+body{
+    text-align: center;
+    content: '';
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: white;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+#survey-form {
+    text-align: left;
+    max-width: 700px;
+    margin: auto;
+    background-color: rgba(27, 27, 50, 0.8);
+    color: white;
+    padding: 50px;
+    vertical-align: center;
+}
+#name, #number, #submit, .dropdown, #favorite, #email{
+    width: 100%;
+  font-size: 1.3em;
+}
+
+#comment{
+    width: 100%;
+    length: 90px;
+  font-size: 1.3em;
+   
+}
+
+
+
+Resources
+    </style>
+    </head>
+    <body>
+            <!--User Story #1: I can see a title with id="title" in H1 sized text.-->
+                    <h1 id="title"> FreeCodeCamp Survey Form</h1>
+            <!--User Story #2: I can see a short explanation with id="description" in P sized text.-->
+                <p id="description"><i>Thank you for taking the time to help us improve the platform</i></p>
+            <!--User Story #3: I can see a form with id="survey-form".-->  
+        <div id="survey-form">
+            <!--User Story #4: Inside the form element, I am required to enter my name in a field with id="name".
+                User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.-->
+                  <p><label for="name">Name:</label><br>
+                  <input id="name" type="text" placeholder="Enter Your Name" required></p>
+            <!--User Story #5: Inside the form element, I am required to enter an email in a field with id="email".
+                User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.-->
+                <p><label for="email">Email</label><br>
+                  <input id="email" type="email" placeholder="Enter Your Email"required></p>
+            <!--User Story #7: Inside the form, I can enter a number in a field with id="number"
+                User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.
+                User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.-->
+                <p><label for="number">Age (optional)</label><br>
+                <input id="number" type="number" placeholder="Age" min="1" max="100"></p>
+            <!--User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown".-->
+                  <p><label for="dropdown">Which option best describes your current role?</label><br>
+                <input class="dropdown" name="role" list="role" placeholder="Sellect curent role">
+                <datalist id="role">
+                    <option value="Student">
+                    <option value="Full Time Job">
+                    <option value="Full Time Learner">
+                    <option value="Prefer Not To Say">
+                    <option value="Other">
+                </datalist></p>
+            <!--User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute.-->
+            <div>
+                <label for="recommend" >Would you recommend freeCodeCamp to a friend?</label><br>
+                    <input id="definitely" type="radio" name="recommend">
+                    <label for="definitely">Definitely</label><br>
+                    <input id="maybe" type="radio" name="recommend">
+                    <label for="maybe">Maybe</label><br>
+                    <input id="notsure" type="radio" name="recommend">
+                    <label for="notsure">Not sure</label><br><br>
+            <!--User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.-->
+ <label>What is your favorite feature of freeCodeCamp?</label><br>
+               <input class="dropdown" name="favorite" list="favorite" placeholder="Select an option">
+               <datalist id="favorite">
+                    <option value="Challenges">
+                    <option value="Projects">
+                    <option value="Comunity"> 
+                    <option value="Open Source">
+              </datalist><br>
+            
+                <br><label for="improve">What would you like to see improved? (Check all that apply)</label><br>
+                <input type="checkbox" name="improve">
+               <label>Front-end Projects</label><br>
+               <input type="checkbox" name="improve">
+                <label>Back-end Projects</label><br>
+                <input type="checkbox" name="improve">
+                <label>Data Visualization</label><br>
+                <input type="checkbox" name="improve">
+                <label>Challenges</label><br>
+                <input type="checkbox" name="improve">
+                <label>Open Source Community</label><br>
+                <input type="checkbox" name="improve">
+                <label>Gitter help rooms</label><br>
+                <input type="checkbox" name="improve">
+                <label>Videos</label><br>
+                <input type="checkbox" name="improve">
+                <label>City Meetups</label><br>
+                <input type="checkbox" name="improve">
+                <label>Wiki</label><br>
+                <input type="checkbox" name="improve">
+                <label>Forum</label><br>
+                <input type="checkbox" name="improve">
+                <label>Additional Courses</label><br>
+              <!--User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments.-->
+              <br><label for="comment">Any comments or suggestions?</label><br>
+              <textarea id="comment" name="comment" rows="4" cols="50">Enter your comment here...</textarea><br>
+              <!--User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs.-->
+             <br><button id="submit" style="background-color:green; color: white">Submit</button>
+              
+        </div>
+    </body>
+   
+</html>
+
+
+
+Resources
