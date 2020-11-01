@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: "Raleway", sans-serif;
+        background-color: darkturquoise;
+      }
+      #quote-box {
+        position: relative;
+        background-color: white;
+        width: 50%;
+        padding: 20px;
+        margin: auto;
+        margin-top: 7em;
+      }
+      #text {
+        color: darkturquoise;
+        font-size: 1.6em;
+        padding: 30px;
+        text-align: center;
+      }
+      #author {
+        color: darkturquoise;
+        font-size: 1.2em;
+        text-align: end;
+        padding-right: 20px;
+      }
+      #tweet-quote,
+      #thumble-quote {
+        background-color: darkturquoise;
+        color: white;
+        width: 2.1em;
+        height: 1.5em;
+        font-size: 1.2em;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px;
+        padding-top: 11px;
+      }
+      #new-quote {
+        position: absolute;
+        right: 20px;
+        width: 8em;
+        height: 3em;
+        background-color: darkturquoise;
+        color: white;
+        margin: 5px 2px;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector("button").onclick = change;
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector("body").onload = change;
+      });
+
+      function change() {
+        console.log(changeColor());
+        console.log(newQuote());
+      }
+      //change Color onclick;
+      function changeColor() {
+        var randomIndex = Math.floor(Math.random() * 12);
+        var background = document.querySelectorAll(
+          "body, #tweet-quote, #thumble-quote, #new-quote"
+        );
+        var text = document.querySelectorAll("p");
+        for (t of text) {
+          t.style.color = colors[randomIndex];
+        }
+        for (b of background) {
+          b.style.backgroundColor = colors[randomIndex];
+        }
+      }
+      // Change the quote onclick
+      function newQuote() {
+        var number = Math.floor(Math.random() * 11);
+        document.getElementById("text").innerHTML = quotes[number][1];
+        document.getElementById("author").innerHTML = quotes[number][0];
+      }
+
+      const colors = [
+        "#16a085",
+        "#27ae60",
+        "#2c3e50",
+        "#f39c12",
+        "#e74c3c",
+        "#9b59b6",
+        "#FB6964",
+        "#342224",
+        "#472E32",
+        "#BDBB99",
+        "#77B1A9",
+        "#73A857",
+      ];
+      const quotes = [
+        [
+          "Rumi",
+          "Forget safety. Live where you fear to live. Destroy your reputation. Be notorious.",
+        ],
+        [
+          "Albert Einsteine",
+          "Make everything as simple as possible, but not simpler.",
+        ],
+        [
+          "Stephen Hawkingi",
+          "The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.",
+        ],
+        [
+          "Terry Pratchett",
+          "It is said that your life flashes before your eyes just before you die. That is true, it's called Life.",
+        ],
+        [
+          "Mahatma Gandhi",
+          "Strength does not come from physical capacity. It comes from an indomitable will.",
+        ],
+        [
+          "Martin Luther King Jr.",
+          "I know, somehow, that only when it is dark enough can you see the stars.",
+        ],
+        [
+          "Stephen King",
+          "The scariest moment is always just before you start.",
+        ],
+        ["Gena Showalter", "Giving up is the only sure way to fail."],
+        ["J.M. Barrie", "We are all failures. At least the best of us are."],
+        [
+          "Rumi",
+          "Don't be satisfied with stories, how things have gone with others. Unfold your own myth.",
+        ],
+      ];
+    </script>
+  </head>
+  <body>
+    <div id="quote-box">
+      <p id="text"></p>
+      <p id="author"></p>
+      <a id="tweet-quote" href="https://twitter.com/" class="fa fa-twitter"></a>
+      <a
+        id="thumble-quote"
+        href="https://www.tumblr.com/"
+        class="fa fa-tumblr"
+      ></a>
+      <button type="button" id="new-quote">New Quote</button>
+    </div>
+  </body>
+</html>
